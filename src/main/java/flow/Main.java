@@ -13,8 +13,6 @@ public class Main {
         App app = (App) engine.getApp();
 
         System.out.println(app.popResponse());
-        //System.out.println(engine.getAgent().act().peek());
-
 
     }
 }
