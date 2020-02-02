@@ -4,7 +4,7 @@ import flow.IAction;
 import flow.IAgent;
 
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Queue;
 
 public class TextAgent implements IAgent {
   private String[] values;
@@ -13,8 +13,8 @@ public class TextAgent implements IAgent {
     this.values = values;
   }
 
-  public List<IAction> act() {
-    List<IAction> flow = new LinkedList<IAction>();
+  public Queue<IAction> act() {
+    Queue<IAction> flow = new LinkedList<IAction>();
     for (String value : values) {
       flow.add(new TextAction(value));
     }

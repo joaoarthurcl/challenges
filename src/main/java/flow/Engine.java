@@ -1,7 +1,7 @@
 package flow;
 
-import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 public class Engine {
   private IApp app;
@@ -15,7 +15,7 @@ public class Engine {
   }
 
   public void run() throws AgentException, EmptyFlowException, AdapterNotFoundException, AdapterException, ActionException, EventException, ProtocolException, AppException {
-    List<IAction> flow = agent.act();
+    Queue<IAction> flow = agent.act();
     if (flow.isEmpty()) {
       throw new EmptyFlowException();
     }
@@ -40,4 +40,5 @@ public class Engine {
   public IAgent getAgent() {
     return agent;
   }
+
 }

@@ -1,7 +1,7 @@
 package flow;
 
-import java.util.List;
+import java.util.Queue;
 
 public interface IAgent {
-  List<IAction> act() throws AgentException;
+  Queue<IAction> act() throws AgentException;
 }
